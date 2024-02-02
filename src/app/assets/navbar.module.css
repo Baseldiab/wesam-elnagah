@@ -1,0 +1,23 @@
+.navbar {
+  position: sticky !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: 50px;
+}
+.nav_item {
+  /* z-index: 1000; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_itemText,
+.nav_itemIcon {
+  color: #fff;
+  font-size: 16px;
+}
+.nav_item:hover :where(.nav_itemText, .nav_itemIcon) {
+  color: #09e3a8;
+}

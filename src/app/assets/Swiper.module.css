@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+
+.container {
+  position: relative;
+}
+
+.navigator {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navButton {
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 73px;
+  color: #ffffff8f;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+.navButton:hover {
+  color: #fff;
+}
+
+.slideInfo {
+  font-size: 20px;
+  margin: 0 30px;
+  color: #fff;
+}
+
+.swiper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  /* top: -90px; */
+  /* z-index: -1; */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper_content {
+  width: 44%;
+  position: absolute;
+  right: 10%;
+  z-index: 10;
+  text-align: end;
+}
+.swiper_text {
+  color: #fff;
+  margin-bottom: 10px;
+  font-family: "Cairo", sans-serif;
+  font-size: 38px;
+  word-wrap: 0;
+  font-weight: 700;
+}
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity (last value) to make it darker or lighter */
+  z-index: 1;
+}
