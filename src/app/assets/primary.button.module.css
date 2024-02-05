@@ -23,11 +23,11 @@
   width: 3rem;
   height: 3rem;
   background: transparent;
-  border: 1px solid #09e3a8;
+  border: 1px solid #2ebea9;
   border-radius: 1.625rem;
 }
 .primary-btn:hover .circle {
-  background-color: #09e3a8;
+  background-color: #2ebea9;
 }
 
 .primary-btn .circle .icon {

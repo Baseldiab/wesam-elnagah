@@ -18,7 +18,7 @@ import Navbar from "./components/navbar";
 export default function Home() {
   return (
     <main className={"h-[1500px]"}>
-      <Navbar />
+      
       <Swiper slideImages={slideImages} />
     </main>
   );

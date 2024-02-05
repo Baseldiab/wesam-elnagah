@@ -9,7 +9,7 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1000;
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,9 +17,9 @@
 
 .navButton {
   cursor: pointer;
-  padding: 5px 10px;
+  padding: 5px 0px;
   font-size: 73px;
-  color: #ffffff8f;
+  color: #ffffff46;
   border: none;
   border-radius: 4px;
   outline: none;
@@ -30,7 +30,7 @@
 
 .slideInfo {
   font-size: 20px;
-  margin: 0 30px;
+  margin: 0 10px;
   color: #fff;
 }
 
@@ -38,8 +38,8 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  margin: 0 auto;
-  /* top: -90px; */
+  margin: -50px auto;
+  top: -120px;
   /* z-index: -1; */
 }
 
@@ -61,6 +61,7 @@
   width: 44%;
   position: absolute;
   right: 10%;
+  top: 40%;
   z-index: 10;
   text-align: end;
 }

@@ -1,23 +1,36 @@
-.navbar {
-  position: sticky !important;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin-top: 50px;
+.top_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  min-height: 40px;
+  z-index: 10000 !important;
+  position: relative;
 }
+
+.navbar_icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  text-align: right;
+}
+
 .nav_item {
   /* z-index: 1000; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #fff;
+  font-size: 13px;
+  font-family: "Cairo", sans-serif;
 }
 
-.nav_itemText,
-.nav_itemIcon {
-  color: #fff;
-  font-size: 16px;
+.nav_item:hover {
+  color: #2ebea9;
 }
-.nav_item:hover :where(.nav_itemText, .nav_itemIcon) {
-  color: #09e3a8;
+.nav_itemIcon {
+  font-size: 16px;
+  margin-bottom: 5px;
 }
