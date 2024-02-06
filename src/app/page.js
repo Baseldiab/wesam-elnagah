@@ -14,12 +14,16 @@ import Swiper from "@/app/components/swiper";
 import styles from "@/app/assets/Swiper.module.css";
 import { slideImages } from "./lists/sliderImages";
 import Navbar from "./components/navbar";
+import Discounts from "./components/discounts";
 
 export default function Home() {
   return (
     <main className={"h-[1500px]"}>
-      
+      <Navbar />
+
       <Swiper slideImages={slideImages} />
+
+      <Discounts />
     </main>
   );
 }
