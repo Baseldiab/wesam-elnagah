@@ -36,7 +36,7 @@ export default function Navbar() {
         navbar.classList.add("navbar_sticky");
       }
     };
-  }, [window.onscroll]);
+  }, []);
 
   return (
     <>
