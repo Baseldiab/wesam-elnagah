@@ -10,19 +10,20 @@ import "swiper/css/pagination";
 // import required modules
 import { Navigation } from "swiper/modules";
 import Image from "next/image";
-import { cards } from "../lists/cards";
+import { cards } from "../../lists/cards";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faArrowRight, faMountainSun } from "@fortawesome/free-solid-svg-icons";
+import PrimaryButton from "../buttons/primaryButton";
 
 export default function Discounts() {
   return (
-    <section className=" bg-gradient-to-t from-sky-950 to-sky-700 py-10">
-      <div className="container flex justify-between gap-10 relative">
+    <section className=" bg-gradient-to-t from-[#0d142a] to-sky-950 ">
+      <div className=" flex justify-between relative py-14">
         <Swiper
-          slidesPerView={3.3}
+          slidesPerView={3.2}
           initialSlide={6}
           centeredSlides={false}
-          spaceBetween={15}
+          spaceBetween={10}
           freeMode={true}
           grabCursor={true}
           navigation={{
@@ -35,19 +36,48 @@ export default function Discounts() {
           {cards.map((item, index) => {
             return (
               <SwiperSlide key={index}>
-                <div className="discount-card rounded-3xl">
-                  <div className="discount-card_back bg-white rounded-3xl">
-                    <h2>About Us</h2>
-                    <h3>Some words </h3>
-                    <h4>About us</h4>
-                    <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure sunt laborum
-                      magnam, temporibus expedita veniam saepe, excepturi placeat adipisci tempore
-                      doloribus quas!
-                    </p>
+                <div className="main-card rounded-3xl">
+                  <div className="main-card_back bg-white rounded-3xl py-10 p-4">
+                    <div className=" text-right">
+                      <a href="#" title="وسام النجاح للسفر والسياحة">
+                        <FontAwesomeIcon className="text-3xl" icon={faMountainSun} />
+                      </a>
+
+                      <div className="main-card_header flex justify-end my-3">
+                        <h2 className="font-bold text-xl py-1 border-b-2 border-b-[#2ebea9] w-fit fw-bold">
+                          {item.country}
+                        </h2>
+                      </div>
+
+                      <ul className="main-card_content list-disc text-right ps-6 " dir="rtl">
+                        <li className="main-card_content-item font-bold my-3">{item.persons}</li>
+                        <li className="main-card_content-item font-bold my-3">{item.price}</li>
+                        <li className="main-card_content-item font-bold my-3">
+                          <span>بدلا من</span>
+                          <del className="ms-2">{item.discount}</del>
+                        </li>
+                      </ul>
+
+                      <div
+                        dir="rtl"
+                        className="bg-green-200 py-1 rounded-md px-2 border-r-4 mt-3 mb-2 border-green-600"
+                      >
+                        <span className="mx-0.5 text-gray-500">وفر:</span>
+                        <span className="mx-0.5">{item.discount - item.priceItem}</span>
+                        <span className="mx-0.5 text-gray-500">ريال سعودي</span>
+                      </div>
+
+                      <hr className="w-full h-0.5 bg-gray-300 " />
+
+                      <PrimaryButton
+                        classesParent={"my-6"}
+                        textColor={"text-black"}
+                        text={"تفاصيل البرنامج"}
+                      />
+                    </div>
                   </div>
                   <div
-                    className="discount-card_front rounded-3xl"
+                    className="main-card_front rounded-3xl container"
                     style={{ background: `url(${item.image}) center / cover` }}
                   ></div>
                 </div>
@@ -56,8 +86,8 @@ export default function Discounts() {
           })}
         </Swiper>
 
-        <div className="">
-          <h2 className="text-white font-semibold text-right" style={{ fontSize: "45px" }}>
+        <div className="px-10">
+          <h2 className="text-white font-semibold text-right" style={{ fontSize: "35px" }}>
             أحدث خصومات البرامج السياحية
           </h2>
           <div className="z-50 flex justify-end gap-5 mt-10">

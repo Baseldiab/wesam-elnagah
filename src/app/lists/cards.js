@@ -4,7 +4,8 @@ export const cards = [
     country: "تركيا",
     persons: " عرض لشخصين",
     price: "سعر البرنامج 6000",
-    discount: "بدلا من 6500",
+    discount: 6500,
+    priceItem: 6000,
     image: "/images/card-turkey.jpg",
   },
   {
@@ -12,7 +13,8 @@ export const cards = [
     country: "اذبريجان",
     persons: " عرض لشخصين",
     price: "سعر البرنامج 3250",
-    discount: "بدلا من 3700",
+    discount: 3700,
+    priceItem: 3250,
     image: "/images/card-asbirijan.jpg",
   },
   {
@@ -20,7 +22,8 @@ export const cards = [
     country: "مصر",
     persons: " عرض لشخصين",
     price: "سعر البرنامج 5700",
-    discount: "بدلا من 6500",
+    discount: 6500,
+    priceItem: 5700,
     image: "/images/card-egypt.jpg",
   },
   {
@@ -28,7 +31,8 @@ export const cards = [
     country: "شاطئ المالديف",
     persons: " عرض لشخصين",
     price: "سعر البرنامج 5700",
-    discount: "بدلا من 6500",
+    discount: 6500,
+    priceItem: 5700,
     image: "/images/card-maldives.jpg",
   },
   {
@@ -36,7 +40,8 @@ export const cards = [
     country: "الهند",
     persons: " عرض لشخصين",
     price: "سعر البرنامج 5700",
-    discount: "بدلا من 6500",
+    discount: 6500,
+    priceItem: 5700,
     image: "/images/card-india.jpg",
   },
   {
@@ -44,7 +49,8 @@ export const cards = [
     country: "ابو ظبي",
     persons: " عرض لشخصين",
     price: "سعر البرنامج 8600",
-    discount: "بدلا من 9000",
+    discount: 9000,
+    priceItem: 8600,
     image: "/images/card-abudubai.jpg",
   },
   {
@@ -52,7 +58,8 @@ export const cards = [
     country: "قطر",
     persons: " عرض لشخصين",
     price: "سعر البرنامج 3600",
-    discount: "بدلا من 4000",
+    discount: 4000,
+    priceItem: 3600,
     image: "/images/card-qatar.jpg",
   },
 ];

@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "@/app/assets/navbar.module.css";
+import "../../assets/navbar.css";
 
 export default function NavbarItem({ icon, text }) {
   return (
-    <a href="#" className={styles.nav_item}>
+    <a href="#" className={"nav_item"}>
       {icon}
       {text}
     </a>

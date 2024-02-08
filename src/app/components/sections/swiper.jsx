@@ -1,10 +1,9 @@
 "use client";
 
-import styles from "@/app/assets/Swiper.module.css";
+import "../../assets/Swiper.css";
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import PrimaryButton from "./primaryButton";
+
+import PrimaryButton from "../buttons/primaryButton";
 
 const Swiper = ({ slideImages }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,27 +17,27 @@ const Swiper = ({ slideImages }) => {
   };
 
   return (
-    <header className={styles.swiper}>
-      <div className={styles.slides} style={{ transform: `translateX(${-currentIndex * 100}%)` }}>
+    <header className={"swiper"}>
+      <div className={"slides"} style={{ transform: `translateX(${-currentIndex * 100}%)` }}>
         {slideImages.map((item, index) => (
           <div
             key={index}
-            className={styles.slide}
+            className={"slide"}
             style={{
               background: `url(${item.image}) center/cover fixed no-repeat`,
               height: "95vh",
             }}
           >
-            <div className={styles.swiper_content}>
-              <p className={styles.swiper_text}>{item.text}</p>
-              <PrimaryButton text={item.btnText} />
+            <div className={"swiper_content"}>
+              <p className={"swiper_text"}>{item.text}</p>
+              <PrimaryButton textColor={"text-white"} text={item.btnText} />
             </div>
           </div>
         ))}
       </div>
       {/* ARROW NAVIGATOR */}
-      <div className={styles.navigator}>
-        <button className={styles.navButton} onClick={goToPreviousSlide}>
+      <div className={"navigator"}>
+        <button className={"navButton"} onClick={goToPreviousSlide}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="80"
@@ -53,10 +52,10 @@ const Swiper = ({ slideImages }) => {
             />
           </svg>
         </button>
-        <div className={styles.slideInfo}>
+        <div className={"slideInfo"}>
           {slideImages.length} / {currentIndex + 1}
         </div>
-        <button className={styles.navButton} onClick={goToNextSlide}>
+        <button className={"navButton"} onClick={goToNextSlide}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="80"

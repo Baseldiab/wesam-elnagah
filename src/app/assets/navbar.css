@@ -8,6 +8,11 @@
   position: relative;
 }
 
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
 .navbar_icons {
   display: flex;
   justify-content: space-between;
@@ -31,6 +36,7 @@
   color: #2ebea9;
 }
 .nav_itemIcon {
-  font-size: 16px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  width: 17px;
+  height: 17px;
 }
