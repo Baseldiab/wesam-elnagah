@@ -13,6 +13,7 @@
 import Swiper from "./components/sections/swiper.jsx";
 import { slideImages } from "./lists/sliderImages";
 import Discounts from "./components/sections/discounts";
+import Benefits from "./components/sections/benefits.jsx";
 
 export default function Home() {
   return (
@@ -20,6 +21,8 @@ export default function Home() {
       <Swiper slideImages={slideImages} />
 
       <Discounts />
+
+      <Benefits />
     </main>
   );
 }
